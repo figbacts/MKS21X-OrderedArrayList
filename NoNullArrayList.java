@@ -1,5 +1,5 @@
+import java.util.ArrayList;
 public class NoNullArrayList<T> extends ArrayList<T>{
-  import java.util.ArrayList;
   public NoNullArrayList(){
     super();
   }
