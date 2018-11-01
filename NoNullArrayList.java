@@ -6,23 +6,23 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(int index){
     super(index);
   }
-  public String set(int index, String newthing){
+  public String set(int index, T newthing){
     if (newthing == null){
       throw new IllegalArgumentException("You try to set a null");
     }
-    super(index,newthing);
+    super.set(index,newthing);
   }
-  public void add(String newthing){
+  public void add(T newthing){
     if (newthing == null){
       throw new IllegalArgumentException("You try to add a null");
     }
-    super(newthing);
+    super.add(newthing);
   }
-  public void add(int index, String test){
+  public void add(int index, T test){
     if (newthing == null){
       throw new IllegalArgumentException("You try to add a null at" + index);
     }
-    super(index,test);
+    super.add(index,test);
   }
-  
+
 }
