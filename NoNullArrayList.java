@@ -12,7 +12,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     }
     super.set(index,newthing);
   }
-  public void add(T newthing){
+  public boolean add(T newthing){
     if (newthing == null){
       throw new IllegalArgumentException("You try to add a null");
     }
