@@ -9,17 +9,25 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   private int findIndex (T newthing){
     int index = 0;
     for (int i = 0; i < this.size(); i ++){
-      if (this.get(i).compareTo() <= 0){
+      if (this.get(i).compareTo(newthing) <= 0){
         index ++;
       }
     }
+    return index;
   }
   public boolean add(T newthing){
     int index = findIndex(newthing);
-    return super.add(index, newthing);
+    super.add(index, newthing);
+    return true;
   }
   public void add(int index, T newthing){
     int inde = findIndex(newthing);
-    return super.add(inde, newthing);
+    super.add(inde, newthing);
+  }
+  public T set(int index, T newthing){
+    int inde = findIndex(newthing);
+    super.remove(index);
+    this.add(inde,newthing);
+    return newthing;
   }
 }
